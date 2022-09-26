@@ -17,5 +17,5 @@ install:
 
 clean:
 	@echo "libxml cleaning"
-	rm -rf libxml2-${LIBXMLVERSION}.0{,.tar.xz}
+	@rm -rf libxml2-${LIBXMLVERSION}.0{,.tar.xz}
 
