@@ -1,0 +1,24 @@
+name: Makefile CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: build
+      run: ./build.sh
+      
+    - name: upload cross compiler
+      uses: actions/upload-artifact@v3.1.0
+      with:
+        name: cross-compiler
+        path: output.tgz
