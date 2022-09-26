@@ -1,6 +1,6 @@
 #!/bin/bash
 wget http://musl.cc/x86_64-linux-musl-cross.tgz
-tar xvf x86-64-linux-musl-cross.tgz
+tar xf x86_64-linux-musl-cross.tgz
 
 export BASE_PATH=$(pwd)
 export INSTALLPATH=$(pwd)/x86_64-linux-musl-cross/x86_64-linux-musl
@@ -33,4 +33,4 @@ done
 deltmp
 
 cd $BASE_PATH
-tar -czf output.tgz x86-64-linux-musl-cross
+tar -czf output.tgz x86_64-linux-musl-cross
