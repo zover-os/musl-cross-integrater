@@ -7,7 +7,8 @@ prepare:
 build:
 	@echo "libstdc++ building"
 	@cd gcc-${GCCVERSION}/build ;\
-	../libstdc++-v3/configure --host=${BUILDHOST} --prefix=/ --disable-libstdcxx-pch --disable-multilib ;\
+	../libstdc++-v3/configure --host=${BUILDHOST} --prefix=/ --disable-libstdcxx-pch --disable-multilib \
+		--with-gxx-include-dir=${INSTALLPATH}/../lib/${BUILDHOST}/include/c++/12.2.0  ;\
 	make -j$(shell nproc --all)
 
 install:

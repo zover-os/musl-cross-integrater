@@ -7,7 +7,7 @@ prepare:
 build:
 	@echo "libxml building"
 	@cd libxml2-${LIBXMLVERSION}.0 ;\
-	./configure --prefix=/ --sysconfdir=/etc --disable-static --without-python --host=${BUILDHOST} ;\
+	./configure --prefix=/ --sysconfdir=/etc --disable-static --without-python --without-icu --host=${BUILDHOST} ;\
 	make -j$(shell nproc --all)
 
 install:

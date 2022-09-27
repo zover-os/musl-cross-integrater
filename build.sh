@@ -1,5 +1,5 @@
 #!/bin/bash
-wget http://musl.cc/x86_64-linux-musl-cross.tgz
+wget -nv http://musl.cc/x86_64-linux-musl-cross.tgz
 tar xf x86_64-linux-musl-cross.tgz
 
 export BASE_PATH=$(pwd)
@@ -14,6 +14,7 @@ export LD=$(pwd)/x86_64-linux-musl-cross/bin/x86_64-linux-musl-ld
 export LDSHARED=$LD
 export BUILDHOST=x86_64-linux-musl
 deltmp() {
+	#echo ${TMPDIR}
 	rm -rf ${TMPDIR}
 }
 
